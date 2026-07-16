@@ -1,6 +1,30 @@
 table team_season_summary
 	lineageTag: f3282b51-64d4-4fd8-87a7-f62d2beda043
 
+	measure 'Avg Win Pct' = AVERAGE(team_season_summary[win_pct])
+		formatString: 0.0%
+		lineageTag: a183b115-ff57-4add-9dd2-6aaccfd1617f
+
+	measure 'Avg Off EPA per Play' = AVERAGE(team_season_summary[off_epa_per_play])
+		formatString: 0.000
+		lineageTag: 74227f89-fc12-4894-9054-913dcf97c402
+
+	measure 'Avg Def EPA Allowed' = AVERAGE(team_season_summary[def_epa_per_play_allowed])
+		formatString: 0.000
+		lineageTag: 7c524064-b69a-49fa-9ecc-203b6153e993
+
+	measure 'Total Wins' = SUM(team_season_summary[wins])
+		formatString: 0
+		lineageTag: f5a07774-883e-4cef-8fee-943475f64929
+
+	measure 'Bears Win Pct' = CALCULATE([Avg Win Pct], team_season_summary[team] = "CHI")
+		formatString: 0.0%
+		lineageTag: a7683a11-5656-49b8-8fa5-f92ecc6fd070
+
+	measure 'League Avg Off EPA' = CALCULATE([Avg Off EPA per Play], ALL(team_season_summary[team]))
+		formatString: 0.000
+		lineageTag: 44f6baea-6266-40b4-a166-a5b61b5ad6e4
+
 	column team
 		dataType: string
 		lineageTag: 2860c168-e8c0-4f9f-8ade-973ce809f4ad
@@ -157,30 +181,6 @@ table team_season_summary
 
 		annotation SummarizationSetBy = Automatic
 
-	measure 'Avg Win Pct' = AVERAGE(team_season_summary[win_pct])
-		formatString: 0.0%
-		lineageTag: a183b115-ff57-4add-9dd2-6aaccfd1617f
-
-	measure 'Avg Off EPA per Play' = AVERAGE(team_season_summary[off_epa_per_play])
-		formatString: 0.000
-		lineageTag: 74227f89-fc12-4894-9054-913dcf97c402
-
-	measure 'Avg Def EPA Allowed' = AVERAGE(team_season_summary[def_epa_per_play_allowed])
-		formatString: 0.000
-		lineageTag: 7c524064-b69a-49fa-9ecc-203b6153e993
-
-	measure 'Total Wins' = SUM(team_season_summary[wins])
-		formatString: 0
-		lineageTag: f5a07774-883e-4cef-8fee-943475f64929
-
-	measure 'Bears Win Pct' = CALCULATE([Avg Win Pct], team_season_summary[team] = "CHI")
-		formatString: 0.0%
-		lineageTag: a7683a11-5656-49b8-8fa5-f92ecc6fd070
-
-	measure 'League Avg Off EPA' = CALCULATE([Avg Off EPA per Play], ALL(team_season_summary[team]))
-		formatString: 0.000
-		lineageTag: 44f6baea-6266-40b4-a166-a5b61b5ad6e4
-
 	partition team_season_summary = m
 		mode: import
 		source =
@@ -192,3 +192,4 @@ table team_season_summary
 				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
+

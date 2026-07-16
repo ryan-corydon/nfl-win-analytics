@@ -28,3 +28,4 @@ table feature_importance
 				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
+

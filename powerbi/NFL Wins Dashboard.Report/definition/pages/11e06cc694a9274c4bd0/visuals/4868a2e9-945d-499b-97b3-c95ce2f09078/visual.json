@@ -4,9 +4,9 @@
   "position": {
     "x": 640,
     "y": 150,
-    "width": 620,
-    "height": 550,
     "z": 1002,
+    "height": 550,
+    "width": 620,
     "tabOrder": 1002
   },
   "visual": {
@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "feature_importance.metric",
-              "nativeQueryRef": "metric"
+              "nativeQueryRef": "metric",
+              "active": true
             }
           ]
         },
@@ -35,23 +36,50 @@
           "projections": [
             {
               "field": {
-                "Column": {
+                "Aggregation": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "feature_importance"
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "feature_importance"
+                        }
+                      },
+                      "Property": "importance"
                     }
                   },
-                  "Property": "importance"
+                  "Function": 0
                 }
               },
-              "queryRef": "feature_importance.importance",
+              "queryRef": "Sum(feature_importance.importance)",
               "nativeQueryRef": "importance"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "feature_importance"
+                      }
+                    },
+                    "Property": "importance"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
       }
     },
-    "objects": {},
     "visualContainerObjects": {
       "title": [
         {
@@ -67,5 +95,42 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "d1820007086ba2155edd",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "feature_importance"
+              }
+            },
+            "Property": "metric"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "504489591e903aaacc97",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "feature_importance"
+                  }
+                },
+                "Property": "importance"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

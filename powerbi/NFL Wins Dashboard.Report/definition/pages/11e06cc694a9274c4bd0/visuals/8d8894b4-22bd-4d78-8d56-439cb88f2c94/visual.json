@@ -4,9 +4,9 @@
   "position": {
     "x": 20,
     "y": 150,
-    "width": 600,
-    "height": 550,
     "z": 1003,
+    "height": 550,
+    "width": 600,
     "tabOrder": 1003
   },
   "visual": {
@@ -117,7 +117,6 @@
         }
       }
     },
-    "objects": {},
     "visualContainerObjects": {
       "title": [
         {
@@ -133,5 +132,107 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "a32a7011a4e268e60879",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "team_season_summary"
+              }
+            },
+            "Property": "team"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "d8fa8a37b24ca85bada8",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "team_season_summary"
+              }
+            },
+            "Property": "season"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "b8915866b48a22c98dc8",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "team_season_summary"
+              }
+            },
+            "Property": "wins"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "cc44e87b443320aaeb7a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "team_season_summary"
+              }
+            },
+            "Property": "win_pct"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "2054dc2046e4363764f8",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "team_season_summary"
+              }
+            },
+            "Property": "off_epa_per_play"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "29042ffd26c1cad6efa7",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "team_season_summary"
+              }
+            },
+            "Property": "def_epa_per_play_allowed"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "818928bc61196608351c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "team_season_summary"
+              }
+            },
+            "Property": "turnover_margin"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

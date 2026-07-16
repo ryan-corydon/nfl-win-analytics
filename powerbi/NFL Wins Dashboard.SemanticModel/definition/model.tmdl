@@ -10,5 +10,14 @@ annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBI_ProTooling = ["DevMode"]
 
+annotation PBI_QueryOrder = ["bears_vs_league","correlation_with_wins","feature_importance","linear_coefficients","teams","team_season_summary"]
+
+ref table bears_vs_league
+ref table correlation_with_wins
+ref table feature_importance
+ref table linear_coefficients
+ref table teams
+ref table team_season_summary
+
 ref cultureInfo en-US
 

@@ -7,7 +7,86 @@
         "x": 0,
         "y": 0
       },
-      "nodes": [],
+      "nodes": [
+        {
+          "location": {
+            "x": 568,
+            "y": 25
+          },
+          "nodeIndex": "bears_vs_league",
+          "nodeLineageTag": "8a30442b-364c-4b39-9236-6ef7d9f2a941",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 852,
+            "y": 111
+          },
+          "nodeIndex": "correlation_with_wins",
+          "nodeLineageTag": "94d5e2ba-65fa-444e-bd04-92a94584b1ed",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1136,
+            "y": 111
+          },
+          "nodeIndex": "feature_importance",
+          "nodeLineageTag": "ab47c3d2-3f0a-4562-ba67-bbb795ca67c4",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1420,
+            "y": 111
+          },
+          "nodeIndex": "linear_coefficients",
+          "nodeLineageTag": "e8476348-eec1-4737-b690-8b983481cda6",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 334,
+            "y": -25
+          },
+          "nodeIndex": "team_season_summary",
+          "nodeLineageTag": "f3282b51-64d4-4fd8-87a7-f62d2beda043",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": -11
+          },
+          "nodeIndex": "teams",
+          "nodeLineageTag": "0d1539e3-3947-405d-9c77-33c74629fa19",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
       "name": "All tables",
       "zoomValue": 100,
       "pinKeyFieldsToTop": false,

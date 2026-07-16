@@ -28,3 +28,4 @@ table linear_coefficients
 				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
+
