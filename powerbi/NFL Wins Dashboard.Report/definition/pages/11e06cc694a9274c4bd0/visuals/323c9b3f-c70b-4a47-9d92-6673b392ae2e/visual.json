@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
-  "name": "608102d3-8ec6-4ff1-86c1-b17f868095f0",
+  "name": "323c9b3f-c70b-4a47-9d92-6673b392ae2e",
   "position": {
-    "x": 20,
+    "x": 300,
     "y": 20,
     "width": 260,
     "height": 110,
-    "z": 1000,
-    "tabOrder": 1000
+    "z": 1001,
+    "tabOrder": 1001
   },
   "visual": {
     "visualType": "card",
@@ -23,11 +23,11 @@
                       "Entity": "team_season_summary"
                     }
                   },
-                  "Property": "Avg Win Pct"
+                  "Property": "Avg Off EPA per Play"
                 }
               },
-              "queryRef": "team_season_summary.Avg Win Pct",
-              "nativeQueryRef": "Avg Win Pct"
+              "queryRef": "team_season_summary.Avg Off EPA per Play",
+              "nativeQueryRef": "Avg Off EPA per Play"
             }
           ]
         }

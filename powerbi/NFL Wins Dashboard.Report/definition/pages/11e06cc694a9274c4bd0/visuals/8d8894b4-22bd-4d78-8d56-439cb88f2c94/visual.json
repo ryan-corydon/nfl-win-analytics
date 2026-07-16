@@ -1,0 +1,137 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "8d8894b4-22bd-4d78-8d56-439cb88f2c94",
+  "position": {
+    "x": 20,
+    "y": 150,
+    "width": 600,
+    "height": 550,
+    "z": 1003,
+    "tabOrder": 1003
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "team_season_summary"
+                    }
+                  },
+                  "Property": "team"
+                }
+              },
+              "queryRef": "team_season_summary.team",
+              "nativeQueryRef": "team"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "team_season_summary"
+                    }
+                  },
+                  "Property": "season"
+                }
+              },
+              "queryRef": "team_season_summary.season",
+              "nativeQueryRef": "season"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "team_season_summary"
+                    }
+                  },
+                  "Property": "wins"
+                }
+              },
+              "queryRef": "team_season_summary.wins",
+              "nativeQueryRef": "wins"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "team_season_summary"
+                    }
+                  },
+                  "Property": "win_pct"
+                }
+              },
+              "queryRef": "team_season_summary.win_pct",
+              "nativeQueryRef": "win_pct"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "team_season_summary"
+                    }
+                  },
+                  "Property": "off_epa_per_play"
+                }
+              },
+              "queryRef": "team_season_summary.off_epa_per_play",
+              "nativeQueryRef": "off_epa_per_play"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "team_season_summary"
+                    }
+                  },
+                  "Property": "def_epa_per_play_allowed"
+                }
+              },
+              "queryRef": "team_season_summary.def_epa_per_play_allowed",
+              "nativeQueryRef": "def_epa_per_play_allowed"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "team_season_summary"
+                    }
+                  },
+                  "Property": "turnover_margin"
+                }
+              },
+              "queryRef": "team_season_summary.turnover_margin",
+              "nativeQueryRef": "turnover_margin"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {},
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Team-Season Detail'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
