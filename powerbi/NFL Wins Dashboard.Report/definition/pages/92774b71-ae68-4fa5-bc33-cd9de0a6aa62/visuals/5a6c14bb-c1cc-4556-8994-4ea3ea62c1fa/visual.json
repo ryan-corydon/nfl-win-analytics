@@ -1,0 +1,123 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "5a6c14bb-c1cc-4556-8994-4ea3ea62c1fa",
+  "position": {
+    "x": 20,
+    "y": 440,
+    "width": 1220,
+    "height": 250,
+    "z": 1002,
+    "tabOrder": 1002
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bears_vs_league"
+                    }
+                  },
+                  "Property": "season"
+                }
+              },
+              "queryRef": "bears_vs_league.season",
+              "nativeQueryRef": "season"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bears_vs_league"
+                    }
+                  },
+                  "Property": "wins"
+                }
+              },
+              "queryRef": "bears_vs_league.wins",
+              "nativeQueryRef": "wins"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bears_vs_league"
+                    }
+                  },
+                  "Property": "losses"
+                }
+              },
+              "queryRef": "bears_vs_league.losses",
+              "nativeQueryRef": "losses"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bears_vs_league"
+                    }
+                  },
+                  "Property": "win_pct"
+                }
+              },
+              "queryRef": "bears_vs_league.win_pct",
+              "nativeQueryRef": "win_pct"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bears_vs_league"
+                    }
+                  },
+                  "Property": "off_epa_per_play"
+                }
+              },
+              "queryRef": "bears_vs_league.off_epa_per_play",
+              "nativeQueryRef": "off_epa_per_play"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bears_vs_league"
+                    }
+                  },
+                  "Property": "off_epa_per_play_league_avg"
+                }
+              },
+              "queryRef": "bears_vs_league.off_epa_per_play_league_avg",
+              "nativeQueryRef": "off_epa_per_play_league_avg"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {},
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Bears Season-by-Season Record'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

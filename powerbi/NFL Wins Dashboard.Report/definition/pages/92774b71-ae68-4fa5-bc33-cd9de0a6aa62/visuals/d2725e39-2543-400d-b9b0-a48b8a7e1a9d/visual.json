@@ -1,0 +1,85 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "d2725e39-2543-400d-b9b0-a48b8a7e1a9d",
+  "position": {
+    "x": 20,
+    "y": 20,
+    "width": 900,
+    "height": 400,
+    "z": 1000,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bears_vs_league"
+                    }
+                  },
+                  "Property": "season"
+                }
+              },
+              "queryRef": "bears_vs_league.season",
+              "nativeQueryRef": "season"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bears_vs_league"
+                    }
+                  },
+                  "Property": "off_epa_per_play"
+                }
+              },
+              "queryRef": "bears_vs_league.off_epa_per_play",
+              "nativeQueryRef": "off_epa_per_play"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "bears_vs_league"
+                    }
+                  },
+                  "Property": "off_epa_per_play_league_avg"
+                }
+              },
+              "queryRef": "bears_vs_league.off_epa_per_play_league_avg",
+              "nativeQueryRef": "off_epa_per_play_league_avg"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {},
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Bears Offensive Efficiency vs League Average'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "9445938b-bb4b-4c14-8e93-4b4485b2fbca",
+  "position": {
+    "x": 20,
+    "y": 20,
+    "width": 300,
+    "height": 100,
+    "z": 1000,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "team_season_summary"
+                    }
+                  },
+                  "Property": "team"
+                }
+              },
+              "queryRef": "team_season_summary.team",
+              "nativeQueryRef": "team"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {},
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Team'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
