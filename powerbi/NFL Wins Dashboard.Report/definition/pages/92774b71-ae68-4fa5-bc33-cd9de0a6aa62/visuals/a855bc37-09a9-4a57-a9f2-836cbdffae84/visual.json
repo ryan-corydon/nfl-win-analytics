@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
-  "name": "cc74026c-1f1e-425f-bbe8-f371d2e994d9",
+  "name": "a855bc37-09a9-4a57-a9f2-836cbdffae84",
   "position": {
-    "x": 580,
+    "x": 20,
     "y": 20,
-    "width": 680,
-    "height": 80,
-    "z": 1004,
-    "tabOrder": 1004
+    "width": 1220,
+    "height": 70,
+    "z": 1003,
+    "tabOrder": 1003
   },
   "visual": {
     "visualType": "textbox",
@@ -19,7 +19,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "What Actually Predicts NFL Wins?",
+                    "value": "Chicago Bears Case Study",
                     "textStyle": {
                       "fontSize": "22px",
                       "fontWeight": "bold",
@@ -32,7 +32,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "A SQL + Python + Power BI analysis of 2019-2023 NFL data, answering: which team performance metrics should a front office prioritize to maximize win probability? Includes a Chicago Bears case study.",
+                    "value": "The Bears' offensive efficiency has trailed the league average every season from 2019-2023 — directly in line with the strongest predictor of wins identified on the League Overview page.",
                     "textStyle": {
                       "fontSize": "11px",
                       "color": "#5B6472",

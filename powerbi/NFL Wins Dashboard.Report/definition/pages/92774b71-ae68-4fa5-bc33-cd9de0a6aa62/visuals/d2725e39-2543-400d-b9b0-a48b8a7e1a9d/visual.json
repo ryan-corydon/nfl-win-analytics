@@ -3,14 +3,14 @@
   "name": "d2725e39-2543-400d-b9b0-a48b8a7e1a9d",
   "position": {
     "x": 20,
-    "y": 20,
+    "y": 100,
     "width": 900,
-    "height": 400,
+    "height": 330,
     "z": 1000,
     "tabOrder": 1000
   },
   "visual": {
-    "visualType": "lineChart",
+    "visualType": "areaChart",
     "query": {
       "queryState": {
         "Category": {
