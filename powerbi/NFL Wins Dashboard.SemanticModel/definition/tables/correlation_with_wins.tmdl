@@ -1,0 +1,30 @@
+table correlation_with_wins
+	lineageTag: 94d5e2ba-65fa-444e-bd04-92a94584b1ed
+
+	column metric
+		dataType: string
+		lineageTag: 938b3b39-df49-4e3f-951b-e5eecef44377
+		summarizeBy: none
+		sourceColumn: metric
+
+		annotation SummarizationSetBy = Automatic
+
+	column correlation_with_win_pct
+		dataType: double
+		lineageTag: 937c5279-d3a3-4dd1-94c2-b90bc87ee07e
+		summarizeBy: sum
+		sourceColumn: correlation_with_win_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	partition correlation_with_wins = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\Ryan\Desktop\nfl-win-analytics\exports\correlation_with_wins.csv"),[Delimiter=",", Columns=2, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"metric", type text}, {"correlation_with_win_pct", type number}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table

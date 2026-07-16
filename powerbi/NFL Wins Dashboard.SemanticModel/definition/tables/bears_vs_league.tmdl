@@ -1,0 +1,258 @@
+table bears_vs_league
+	lineageTag: 8a30442b-364c-4b39-9236-6ef7d9f2a941
+
+	column season
+		dataType: int64
+		formatString: 0
+		lineageTag: 63c85910-49eb-467a-8c65-2a602fc48b4e
+		summarizeBy: sum
+		sourceColumn: season
+
+		annotation SummarizationSetBy = Automatic
+
+	column team
+		dataType: string
+		lineageTag: e1c12515-5761-44ee-a000-796a9b45cdc5
+		summarizeBy: none
+		sourceColumn: team
+
+		annotation SummarizationSetBy = Automatic
+
+	column games_played
+		dataType: int64
+		formatString: 0
+		lineageTag: 67534821-f2a6-4177-8386-80dec50bfcd6
+		summarizeBy: sum
+		sourceColumn: games_played
+
+		annotation SummarizationSetBy = Automatic
+
+	column wins
+		dataType: int64
+		formatString: 0
+		lineageTag: 0920f60e-0556-4e32-96d9-72f4e3f6a12c
+		summarizeBy: sum
+		sourceColumn: wins
+
+		annotation SummarizationSetBy = Automatic
+
+	column losses
+		dataType: int64
+		formatString: 0
+		lineageTag: 4443e77b-897d-4616-bed0-68eb12f4fcdf
+		summarizeBy: sum
+		sourceColumn: losses
+
+		annotation SummarizationSetBy = Automatic
+
+	column win_pct
+		dataType: double
+		lineageTag: 0a03f650-5d72-4468-ad9a-2e5b09a4cc09
+		summarizeBy: sum
+		sourceColumn: win_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	column points_per_game
+		dataType: double
+		lineageTag: 6e29d229-da73-44bf-8ddb-96b26f24583e
+		summarizeBy: sum
+		sourceColumn: points_per_game
+
+		annotation SummarizationSetBy = Automatic
+
+	column points_allowed_per_game
+		dataType: double
+		lineageTag: d8b4ea5b-a1e5-4670-9824-81dee4c22f3f
+		summarizeBy: sum
+		sourceColumn: points_allowed_per_game
+
+		annotation SummarizationSetBy = Automatic
+
+	column point_differential
+		dataType: double
+		lineageTag: 83fc3ffe-c9b1-4738-bff9-7aa01dee28c2
+		summarizeBy: sum
+		sourceColumn: point_differential
+
+		annotation SummarizationSetBy = Automatic
+
+	column off_epa_per_play
+		dataType: double
+		lineageTag: 688a95c7-86ce-4692-a880-fef6aa502701
+		summarizeBy: sum
+		sourceColumn: off_epa_per_play
+
+		annotation SummarizationSetBy = Automatic
+
+	column off_success_rate
+		dataType: double
+		lineageTag: 9a5d0da2-a833-4f1b-bb8e-617567ddc885
+		summarizeBy: sum
+		sourceColumn: off_success_rate
+
+		annotation SummarizationSetBy = Automatic
+
+	column off_third_down_pct
+		dataType: double
+		lineageTag: 45a83505-5371-403a-9c84-87e91536d8b6
+		summarizeBy: sum
+		sourceColumn: off_third_down_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	column off_turnovers
+		dataType: double
+		lineageTag: e275e3b9-722b-4b02-b898-d2d454abc58a
+		summarizeBy: sum
+		sourceColumn: off_turnovers
+
+		annotation SummarizationSetBy = Automatic
+
+	column off_penalties
+		dataType: double
+		lineageTag: e5ab5bfb-5e29-434b-83e3-fcb1e4bc0ae0
+		summarizeBy: sum
+		sourceColumn: off_penalties
+
+		annotation SummarizationSetBy = Automatic
+
+	column def_epa_per_play_allowed
+		dataType: double
+		lineageTag: 4084b690-e347-41cc-bfdf-c620e86c6210
+		summarizeBy: sum
+		sourceColumn: def_epa_per_play_allowed
+
+		annotation SummarizationSetBy = Automatic
+
+	column def_success_rate_allowed
+		dataType: double
+		lineageTag: 98e63190-e9bd-499b-b79a-5cfe0b6052e1
+		summarizeBy: sum
+		sourceColumn: def_success_rate_allowed
+
+		annotation SummarizationSetBy = Automatic
+
+	column def_third_down_pct_allowed
+		dataType: double
+		lineageTag: 9a945001-a1ea-4867-bb04-18664f1718be
+		summarizeBy: sum
+		sourceColumn: def_third_down_pct_allowed
+
+		annotation SummarizationSetBy = Automatic
+
+	column def_takeaways
+		dataType: double
+		lineageTag: f41440d3-4f01-4115-aba5-4ce3afba3e3c
+		summarizeBy: sum
+		sourceColumn: def_takeaways
+
+		annotation SummarizationSetBy = Automatic
+
+	column turnover_margin
+		dataType: double
+		lineageTag: dfac9d77-6ddf-401f-93a8-68a1e2f1955b
+		summarizeBy: sum
+		sourceColumn: turnover_margin
+
+		annotation SummarizationSetBy = Automatic
+
+	column off_epa_per_play_league_avg
+		dataType: double
+		lineageTag: cc547721-9fcd-43ca-8a34-f6bfbf3e37fa
+		summarizeBy: sum
+		sourceColumn: off_epa_per_play_league_avg
+
+		annotation SummarizationSetBy = Automatic
+
+	column off_success_rate_league_avg
+		dataType: double
+		lineageTag: 043f030d-569a-425c-8f2f-bc590d75c0c3
+		summarizeBy: sum
+		sourceColumn: off_success_rate_league_avg
+
+		annotation SummarizationSetBy = Automatic
+
+	column off_third_down_pct_league_avg
+		dataType: double
+		lineageTag: 6a7af2b3-3e56-4e74-aaf6-810e4a83154c
+		summarizeBy: sum
+		sourceColumn: off_third_down_pct_league_avg
+
+		annotation SummarizationSetBy = Automatic
+
+	column off_turnovers_league_avg
+		dataType: double
+		lineageTag: 40f9b33f-5591-44d9-aebf-5a921d1129c6
+		summarizeBy: sum
+		sourceColumn: off_turnovers_league_avg
+
+		annotation SummarizationSetBy = Automatic
+
+	column off_penalties_league_avg
+		dataType: double
+		lineageTag: eadd22a6-2770-4a13-a74e-4522ea6e490e
+		summarizeBy: sum
+		sourceColumn: off_penalties_league_avg
+
+		annotation SummarizationSetBy = Automatic
+
+	column def_epa_per_play_allowed_league_avg
+		dataType: double
+		lineageTag: 9d716767-ec31-425f-be5a-29a24ea922bc
+		summarizeBy: sum
+		sourceColumn: def_epa_per_play_allowed_league_avg
+
+		annotation SummarizationSetBy = Automatic
+
+	column def_success_rate_allowed_league_avg
+		dataType: double
+		lineageTag: 0844657c-f92e-486e-9282-85190e53c18a
+		summarizeBy: sum
+		sourceColumn: def_success_rate_allowed_league_avg
+
+		annotation SummarizationSetBy = Automatic
+
+	column def_third_down_pct_allowed_league_avg
+		dataType: double
+		lineageTag: f8714b06-b024-4517-a770-9fe58ba59d10
+		summarizeBy: sum
+		sourceColumn: def_third_down_pct_allowed_league_avg
+
+		annotation SummarizationSetBy = Automatic
+
+	column def_takeaways_league_avg
+		dataType: double
+		lineageTag: 5dbef972-3081-4e03-8fb3-e4cf24e6f371
+		summarizeBy: sum
+		sourceColumn: def_takeaways_league_avg
+
+		annotation SummarizationSetBy = Automatic
+
+	column turnover_margin_league_avg
+		dataType: double
+		lineageTag: 4bf64f06-143a-4069-bca0-cfbffd54e1ff
+		summarizeBy: sum
+		sourceColumn: turnover_margin_league_avg
+
+		annotation SummarizationSetBy = Automatic
+
+	column win_pct_league_avg
+		dataType: double
+		lineageTag: 25633c0a-ba4a-4e59-9f74-0274041bc93e
+		summarizeBy: sum
+		sourceColumn: win_pct_league_avg
+
+		annotation SummarizationSetBy = Automatic
+
+	partition bears_vs_league = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\Ryan\Desktop\nfl-win-analytics\exports\bears_vs_league.csv"),[Delimiter=",", Columns=30, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"season", Int64.Type}, {"team", type text}, {"games_played", Int64.Type}, {"wins", Int64.Type}, {"losses", Int64.Type}, {"win_pct", type number}, {"points_per_game", type number}, {"points_allowed_per_game", type number}, {"point_differential", type number}, {"off_epa_per_play", type number}, {"off_success_rate", type number}, {"off_third_down_pct", type number}, {"off_turnovers", type number}, {"off_penalties", type number}, {"def_epa_per_play_allowed", type number}, {"def_success_rate_allowed", type number}, {"def_third_down_pct_allowed", type number}, {"def_takeaways", type number}, {"turnover_margin", type number}, {"off_epa_per_play_league_avg", type number}, {"off_success_rate_league_avg", type number}, {"off_third_down_pct_league_avg", type number}, {"off_turnovers_league_avg", type number}, {"off_penalties_league_avg", type number}, {"def_epa_per_play_allowed_league_avg", type number}, {"def_success_rate_allowed_league_avg", type number}, {"def_third_down_pct_allowed_league_avg", type number}, {"def_takeaways_league_avg", type number}, {"turnover_margin_league_avg", type number}, {"win_pct_league_avg", type number}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table

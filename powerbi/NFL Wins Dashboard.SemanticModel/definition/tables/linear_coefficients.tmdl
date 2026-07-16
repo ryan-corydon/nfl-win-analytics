@@ -1,0 +1,30 @@
+table linear_coefficients
+	lineageTag: e8476348-eec1-4737-b690-8b983481cda6
+
+	column metric
+		dataType: string
+		lineageTag: 118c4d09-6ec0-4693-9e2f-27ca6ae53878
+		summarizeBy: none
+		sourceColumn: metric
+
+		annotation SummarizationSetBy = Automatic
+
+	column standardized_coefficient
+		dataType: double
+		lineageTag: 09b0e7ba-950f-4e06-b897-d5e64b90dba7
+		summarizeBy: sum
+		sourceColumn: standardized_coefficient
+
+		annotation SummarizationSetBy = Automatic
+
+	partition linear_coefficients = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\Ryan\Desktop\nfl-win-analytics\exports\linear_coefficients.csv"),[Delimiter=",", Columns=2, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"metric", type text}, {"standardized_coefficient", type number}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table

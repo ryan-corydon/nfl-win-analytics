@@ -32,7 +32,7 @@ y = data[TARGET]
 corr = X.assign(**{TARGET: y}).corr()[TARGET].drop(TARGET).sort_values(key=abs, ascending=False)
 print("=== Correlation with win_pct ===")
 print(corr.to_string())
-corr.rename("correlation_with_win_pct").to_csv("../exports/correlation_with_wins.csv")
+corr.rename("correlation_with_win_pct").rename_axis("metric").to_csv("../exports/correlation_with_wins.csv")
 
 # --- Random Forest feature importance ---
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
@@ -43,7 +43,7 @@ print(f"\n=== Random Forest ===\nHeld-out R^2: {r2:.3f}")
 
 importance = pd.Series(rf.feature_importances_, index=FEATURES).sort_values(ascending=False)
 print(importance.to_string())
-importance.rename("importance").to_csv("../exports/feature_importance.csv")
+importance.rename("importance").rename_axis("metric").to_csv("../exports/feature_importance.csv")
 
 # --- Standardized linear regression for interpretable direction/magnitude ---
 scaler = StandardScaler()
@@ -52,7 +52,7 @@ lin = LinearRegression().fit(X_scaled, y)
 coef = pd.Series(lin.coef_, index=FEATURES).sort_values(key=abs, ascending=False)
 print("\n=== Standardized linear coefficients (direction + magnitude) ===")
 print(coef.to_string())
-coef.rename("standardized_coefficient").to_csv("../exports/linear_coefficients.csv")
+coef.rename("standardized_coefficient").rename_axis("metric").to_csv("../exports/linear_coefficients.csv")
 
 # --- Feature importance chart ---
 fig, ax = plt.subplots(figsize=(8, 5))

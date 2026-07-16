@@ -1,0 +1,4 @@
+relationship 8f6e1c2a-4b3d-4a91-9c7e-2d5f8a1b6c30
+
+	fromColumn: team_season_summary.team
+	toColumn: teams.team_abbr

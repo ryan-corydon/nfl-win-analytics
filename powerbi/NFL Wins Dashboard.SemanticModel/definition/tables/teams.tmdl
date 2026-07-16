@@ -1,0 +1,78 @@
+table teams
+	lineageTag: 0d1539e3-3947-405d-9c77-33c74629fa19
+
+	column team_abbr
+		dataType: string
+		lineageTag: 7e17ca61-2b8a-405c-b450-9b5ac91fed15
+		summarizeBy: none
+		sourceColumn: team_abbr
+
+		annotation SummarizationSetBy = Automatic
+
+	column team_name
+		dataType: string
+		lineageTag: 37e3a2ee-8e12-4df6-bb0d-3579ab1de1e5
+		summarizeBy: none
+		sourceColumn: team_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column team_nick
+		dataType: string
+		lineageTag: db45cfdc-fc31-4d83-8003-9be710f09fb3
+		summarizeBy: none
+		sourceColumn: team_nick
+
+		annotation SummarizationSetBy = Automatic
+
+	column team_conf
+		dataType: string
+		lineageTag: c4590de6-d641-4fb4-be9c-0c5a35497f1f
+		summarizeBy: none
+		sourceColumn: team_conf
+
+		annotation SummarizationSetBy = Automatic
+
+	column team_division
+		dataType: string
+		lineageTag: af23cacb-4be0-4b4c-9d47-cdb6a2ab010d
+		summarizeBy: none
+		sourceColumn: team_division
+
+		annotation SummarizationSetBy = Automatic
+
+	column team_color
+		dataType: string
+		lineageTag: 97f34d3e-adda-4631-9c45-b12e40582103
+		summarizeBy: none
+		sourceColumn: team_color
+
+		annotation SummarizationSetBy = Automatic
+
+	column team_color2
+		dataType: string
+		lineageTag: 85c08559-9b77-4d12-9e8b-d9c9070101bf
+		summarizeBy: none
+		sourceColumn: team_color2
+
+		annotation SummarizationSetBy = Automatic
+
+	column team_logo_espn
+		dataType: string
+		lineageTag: 99591900-fed9-4644-b2eb-9e23472fdcb2
+		summarizeBy: none
+		sourceColumn: team_logo_espn
+
+		annotation SummarizationSetBy = Automatic
+
+	partition teams = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\Ryan\Desktop\nfl-win-analytics\exports\teams.csv"),[Delimiter=",", Columns=8, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"team_abbr", type text}, {"team_name", type text}, {"team_nick", type text}, {"team_conf", type text}, {"team_division", type text}, {"team_color", type text}, {"team_color2", type text}, {"team_logo_espn", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
