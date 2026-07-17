@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
   "name": "3bd386de-7637-47c0-bd76-df7d814dab45",
   "position": {
-    "x": 970,
-    "y": 100,
-    "z": 1004,
-    "height": 90,
-    "width": 290,
+    "x": 646.4039408866995,
+    "y": 101.08374384236453,
+    "z": 4000,
+    "height": 89.556650246305423,
+    "width": 270.44334975369458,
     "tabOrder": 1004
   },
   "visual": {
@@ -28,7 +28,8 @@
               },
               "queryRef": "teams.team_division",
               "nativeQueryRef": "Division",
-              "active": true
+              "active": true,
+              "displayName": "Division"
             }
           ]
         }
