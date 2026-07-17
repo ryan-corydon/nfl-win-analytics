@@ -27,8 +27,9 @@
                 }
               },
               "queryRef": "feature_importance.metric",
-              "nativeQueryRef": "metric",
-              "active": true
+              "nativeQueryRef": "Metric",
+              "active": true,
+              "displayName": "Metric"
             }
           ]
         },
@@ -51,7 +52,8 @@
                 }
               },
               "queryRef": "Sum(feature_importance.importance)",
-              "nativeQueryRef": "importance"
+              "nativeQueryRef": "Importance Level",
+              "displayName": "Importance Level"
             }
           ]
         }

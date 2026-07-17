@@ -4,13 +4,13 @@
   "position": {
     "x": 20,
     "y": 100,
-    "width": 900,
-    "height": 330,
     "z": 1000,
+    "height": 330,
+    "width": 900,
     "tabOrder": 1000
   },
   "visual": {
-    "visualType": "areaChart",
+    "visualType": "lineChart",
     "query": {
       "queryState": {
         "Category": {
@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "bears_vs_league.season",
-              "nativeQueryRef": "season"
+              "nativeQueryRef": "season",
+              "active": true
             }
           ]
         },
@@ -35,37 +36,50 @@
           "projections": [
             {
               "field": {
-                "Column": {
+                "Aggregation": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "bears_vs_league"
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "bears_vs_league"
+                        }
+                      },
+                      "Property": "off_epa_per_play"
                     }
                   },
-                  "Property": "off_epa_per_play"
+                  "Function": 0
                 }
               },
-              "queryRef": "bears_vs_league.off_epa_per_play",
+              "queryRef": "Sum(bears_vs_league.off_epa_per_play)",
               "nativeQueryRef": "off_epa_per_play"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "bears_vs_league"
-                    }
-                  },
-                  "Property": "off_epa_per_play_league_avg"
-                }
-              },
-              "queryRef": "bears_vs_league.off_epa_per_play_league_avg",
-              "nativeQueryRef": "off_epa_per_play_league_avg"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "bears_vs_league"
+                      }
+                    },
+                    "Property": "off_epa_per_play"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
       }
     },
-    "objects": {},
     "visualContainerObjects": {
       "title": [
         {
@@ -81,5 +95,42 @@
         }
       ]
     }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "82f917942caec57243f1",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "bears_vs_league"
+              }
+            },
+            "Property": "season"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "45ff6875984038c91148",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "bears_vs_league"
+                  }
+                },
+                "Property": "off_epa_per_play"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

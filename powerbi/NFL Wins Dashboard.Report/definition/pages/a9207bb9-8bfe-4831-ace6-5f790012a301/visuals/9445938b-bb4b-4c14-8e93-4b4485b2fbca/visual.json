@@ -4,9 +4,9 @@
   "position": {
     "x": 20,
     "y": 100,
-    "width": 300,
-    "height": 90,
     "z": 1000,
+    "height": 90,
+    "width": 300,
     "tabOrder": 1000
   },
   "visual": {
@@ -27,13 +27,34 @@
                 }
               },
               "queryRef": "team_season_summary.team",
-              "nativeQueryRef": "team"
+              "nativeQueryRef": "Team",
+              "active": true,
+              "displayName": "Team"
             }
           ]
         }
       }
     },
-    "objects": {},
+    "objects": {
+      "general": [
+        {
+          "properties": {}
+        }
+      ],
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
     "visualContainerObjects": {
       "title": [
         {
