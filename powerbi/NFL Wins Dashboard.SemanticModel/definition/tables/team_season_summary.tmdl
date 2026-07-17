@@ -7,10 +7,12 @@ table team_season_summary
 
 	measure 'Avg Off EPA per Play' = AVERAGE(team_season_summary[off_epa_per_play])
 		formatString: 0.000
+		description: "Average offensive efficiency (Expected Points Added per play) across the selected teams/seasons. Higher is better."
 		lineageTag: 74227f89-fc12-4894-9054-913dcf97c402
 
 	measure 'Avg Def EPA Allowed' = AVERAGE(team_season_summary[def_epa_per_play_allowed])
 		formatString: 0.000
+		description: "Average defensive efficiency (Expected Points Added allowed per play) across the selected teams/seasons. Lower (more negative) is a better defense."
 		lineageTag: 7c524064-b69a-49fa-9ecc-203b6153e993
 
 	measure 'Total Wins' = SUM(team_season_summary[wins])
@@ -71,6 +73,7 @@ table team_season_summary
 
 	column win_pct
 		dataType: double
+		description: "Percentage of games won that season."
 		lineageTag: 46b8f9a2-191c-4fcc-b803-8971a0577b9b
 		summarizeBy: sum
 		sourceColumn: win_pct
@@ -103,6 +106,7 @@ table team_season_summary
 
 	column off_epa_per_play
 		dataType: double
+		description: "Offensive EPA (Expected Points Added) per Play: how many points, on average, each offensive play is worth versus what's expected in that situation. Positive = more efficient than average; negative = less efficient. The single strongest predictor of wins in this analysis."
 		lineageTag: 43b7fb71-1eb4-42b3-a470-1d41ebc28dd4
 		summarizeBy: sum
 		sourceColumn: off_epa_per_play
@@ -111,6 +115,7 @@ table team_season_summary
 
 	column off_success_rate
 		dataType: double
+		description: "The % of offensive plays that gained enough yardage to keep the team 'on schedule' toward a first down."
 		lineageTag: fc49b082-034a-493d-a31f-a18fda2be0ba
 		summarizeBy: sum
 		sourceColumn: off_success_rate
@@ -119,6 +124,7 @@ table team_season_summary
 
 	column off_third_down_pct
 		dataType: double
+		description: "The % of third-down attempts the offense successfully converted into a first down."
 		lineageTag: 7abf2c16-ff2d-41d9-aa1e-15b8d8332594
 		summarizeBy: sum
 		sourceColumn: off_third_down_pct
@@ -127,6 +133,7 @@ table team_season_summary
 
 	column off_turnovers
 		dataType: double
+		description: "Number of times the offense lost the ball to the other team via interception or fumble."
 		lineageTag: 0e667357-6afe-48f7-a5aa-821c8f89e89f
 		summarizeBy: sum
 		sourceColumn: off_turnovers
@@ -135,6 +142,7 @@ table team_season_summary
 
 	column off_penalties
 		dataType: double
+		description: "Number of penalties committed while the team was on offense."
 		lineageTag: da04bc3e-2b98-476d-b0ab-dad1c5e6aafb
 		summarizeBy: sum
 		sourceColumn: off_penalties
@@ -143,6 +151,7 @@ table team_season_summary
 
 	column def_epa_per_play_allowed
 		dataType: double
+		description: "Defensive EPA (Expected Points Added) per Play Allowed: how many points, on average, the defense gives up per play versus what's expected. Negative = a stingier, more effective defense."
 		lineageTag: 5c183ee5-433b-4d00-b37e-5ccf82e608c4
 		summarizeBy: sum
 		sourceColumn: def_epa_per_play_allowed
@@ -151,6 +160,7 @@ table team_season_summary
 
 	column def_success_rate_allowed
 		dataType: double
+		description: "The % of opponent offensive plays that stayed 'on schedule' against this defense (lower is better defense)."
 		lineageTag: a9676128-6e57-4aca-a77a-f255c4cfd446
 		summarizeBy: sum
 		sourceColumn: def_success_rate_allowed
@@ -159,6 +169,7 @@ table team_season_summary
 
 	column def_third_down_pct_allowed
 		dataType: double
+		description: "The % of opponent third-down attempts this defense allowed to be converted (lower is better defense)."
 		lineageTag: 6efdb0fe-e316-42f7-8080-ee2b237e83fc
 		summarizeBy: sum
 		sourceColumn: def_third_down_pct_allowed
@@ -167,6 +178,7 @@ table team_season_summary
 
 	column def_takeaways
 		dataType: double
+		description: "Number of times the defense forced a turnover (interception or fumble recovery)."
 		lineageTag: 6808bc31-ee68-4328-8a5e-81edbe64324f
 		summarizeBy: sum
 		sourceColumn: def_takeaways
@@ -175,6 +187,7 @@ table team_season_summary
 
 	column turnover_margin
 		dataType: double
+		description: "Takeaways minus giveaways. Positive = the team gained the ball more often than it lost it."
 		lineageTag: 9110ca77-a76a-4f09-9215-9392bb8d3feb
 		summarizeBy: sum
 		sourceColumn: turnover_margin

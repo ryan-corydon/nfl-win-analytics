@@ -1,0 +1,148 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "59eae6a6-c0ec-4cfa-8314-0aeb5ccbea34",
+  "position": {
+    "x": 60,
+    "y": 40,
+    "width": 1160,
+    "height": 640,
+    "z": 1000,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Glossary — How to Read This Dashboard",
+                    "textStyle": {
+                      "fontSize": "22px",
+                      "fontWeight": "bold",
+                      "color": "#14181F",
+                      "fontFamily": "Segoe UI Semibold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "No football knowledge required — here's what the key stats on this dashboard mean.",
+                    "textStyle": { "fontSize": "12px", "color": "#5B6472", "fontFamily": "Segoe UI" }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  { "value": " ", "textStyle": { "fontSize": "8px" } }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "EPA (Expected Points Added):  ",
+                    "textStyle": { "fontSize": "13px", "fontWeight": "bold", "color": "#4f46e5", "fontFamily": "Segoe UI Semibold" }
+                  },
+                  {
+                    "value": "Measures how much a single play is worth in points, based on the down, distance, and field position. A positive number means the play helped the team more than expected; negative means it hurt. This is the single most important stat on this dashboard — it's the strongest predictor of whether a team wins.",
+                    "textStyle": { "fontSize": "12px", "color": "#14181F", "fontFamily": "Segoe UI" }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  { "value": " ", "textStyle": { "fontSize": "6px" } }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Success Rate:  ",
+                    "textStyle": { "fontSize": "13px", "fontWeight": "bold", "color": "#4f46e5", "fontFamily": "Segoe UI Semibold" }
+                  },
+                  {
+                    "value": "The percentage of plays that gained enough yards to keep the offense 'on schedule' toward getting a first down. Higher means a more consistently effective offense.",
+                    "textStyle": { "fontSize": "12px", "color": "#14181F", "fontFamily": "Segoe UI" }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  { "value": " ", "textStyle": { "fontSize": "6px" } }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Third Down %:  ",
+                    "textStyle": { "fontSize": "13px", "fontWeight": "bold", "color": "#4f46e5", "fontFamily": "Segoe UI Semibold" }
+                  },
+                  {
+                    "value": "The percentage of third-down plays that resulted in a first down. A key measure of an offense's ability to keep drives alive (or a defense's ability to stop them).",
+                    "textStyle": { "fontSize": "12px", "color": "#14181F", "fontFamily": "Segoe UI" }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  { "value": " ", "textStyle": { "fontSize": "6px" } }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Turnover Margin:  ",
+                    "textStyle": { "fontSize": "13px", "fontWeight": "bold", "color": "#4f46e5", "fontFamily": "Segoe UI Semibold" }
+                  },
+                  {
+                    "value": "Takeaways (times the defense got the ball back) minus giveaways (times the offense lost the ball). Positive is good — it means the team gained more possessions than it lost.",
+                    "textStyle": { "fontSize": "12px", "color": "#14181F", "fontFamily": "Segoe UI" }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  { "value": " ", "textStyle": { "fontSize": "6px" } }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Win %:  ",
+                    "textStyle": { "fontSize": "13px", "fontWeight": "bold", "color": "#4f46e5", "fontFamily": "Segoe UI Semibold" }
+                  },
+                  {
+                    "value": "The percentage of games won that season.",
+                    "textStyle": { "fontSize": "12px", "color": "#14181F", "fontFamily": "Segoe UI" }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  { "value": " ", "textStyle": { "fontSize": "6px" } }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Offense vs. Defense metrics:  ",
+                    "textStyle": { "fontSize": "13px", "fontWeight": "bold", "color": "#4f46e5", "fontFamily": "Segoe UI Semibold" }
+                  },
+                  {
+                    "value": "\"Off_\" metrics describe how well a team's own offense performed — higher is better. \"Def_\" metrics describe how well a team's defense limited its opponent — for these, a lower (or more negative) number usually means a better defense.",
+                    "textStyle": { "fontSize": "12px", "color": "#14181F", "fontFamily": "Segoe UI" }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

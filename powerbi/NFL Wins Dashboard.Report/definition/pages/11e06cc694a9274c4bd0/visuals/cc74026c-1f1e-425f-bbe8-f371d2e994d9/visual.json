@@ -32,7 +32,7 @@
               {
                 "textRuns": [
                   {
-                    "value": "A SQL + Python + Power BI analysis of 2019-2023 NFL data, answering: which team performance metrics should a front office prioritize to maximize win probability? Includes a Chicago Bears case study.",
+                    "value": "A SQL + Python + Power BI analysis of 2019-2023 NFL data, answering: which team performance metrics should a front office prioritize to maximize win probability? Includes a Chicago Bears case study. New to the stats? See the Glossary page.",
                     "textStyle": {
                       "fontSize": "11px",
                       "color": "#5B6472",
