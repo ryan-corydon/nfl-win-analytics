@@ -1,9 +1,9 @@
 table feature_importance
-	lineageTag: ab47c3d2-3f0a-4562-ba67-bbb795ca67c4
+	lineageTag: 11055636-69ac-48b8-90a1-6ee08fb93d4e
 
 	column metric
 		dataType: string
-		lineageTag: 4dc126df-9801-4692-a419-dcb8498fbe37
+		lineageTag: 18dc614c-4c6b-428f-b350-2fbe6cca4696
 		summarizeBy: none
 		sourceColumn: metric
 
@@ -11,9 +11,25 @@ table feature_importance
 
 	column importance
 		dataType: double
-		lineageTag: adab5a34-1b83-41be-affc-f7156c1d3d73
+		lineageTag: e8f21e73-52da-45e7-9058-609f6c47dfd5
 		summarizeBy: sum
 		sourceColumn: importance
+
+		annotation SummarizationSetBy = Automatic
+
+	column metric_label
+		dataType: string
+		lineageTag: bca1a4a9-c402-4c0e-a9de-4735018f9d31
+		summarizeBy: none
+		sourceColumn: metric_label
+
+		annotation SummarizationSetBy = Automatic
+
+	column metric_definition
+		dataType: string
+		lineageTag: e841b012-99f4-4a91-b1e5-24729b96c00d
+		summarizeBy: none
+		sourceColumn: metric_definition
 
 		annotation SummarizationSetBy = Automatic
 
@@ -21,11 +37,10 @@ table feature_importance
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\Ryan\Desktop\nfl-win-analytics\exports\feature_importance.csv"),[Delimiter=",", Columns=2, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(File.Contents("C:\Users\Ryan\Desktop\nfl-win-analytics\exports\feature_importance.csv"),[Delimiter=",", Columns=4, Encoding=65001, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"metric", type text}, {"importance", type number}})
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"metric", type text}, {"importance", type number}, {"metric_label", type text}, {"metric_definition", type text}})
 				in
 				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
-

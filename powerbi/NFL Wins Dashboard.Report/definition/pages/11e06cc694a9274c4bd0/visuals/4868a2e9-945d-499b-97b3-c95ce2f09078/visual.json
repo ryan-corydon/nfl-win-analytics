@@ -23,13 +23,32 @@
                       "Entity": "feature_importance"
                     }
                   },
-                  "Property": "metric"
+                  "Property": "metric_label"
                 }
               },
-              "queryRef": "feature_importance.metric",
+              "queryRef": "feature_importance.metric_label",
               "nativeQueryRef": "Metric",
               "active": true,
               "displayName": "Metric"
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "feature_importance"
+                    }
+                  },
+                  "Property": "metric_definition"
+                }
+              },
+              "queryRef": "feature_importance.metric_definition",
+              "nativeQueryRef": "What this means",
+              "displayName": "What this means"
             }
           ]
         },

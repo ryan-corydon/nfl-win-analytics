@@ -1,9 +1,9 @@
 table teams
-	lineageTag: 0d1539e3-3947-405d-9c77-33c74629fa19
+	lineageTag: fba929ec-4e19-4417-bead-3ed02e6a3f92
 
 	column team_abbr
 		dataType: string
-		lineageTag: 7e17ca61-2b8a-405c-b450-9b5ac91fed15
+		lineageTag: 23e1b214-e35f-41d3-8475-7a38a8b38246
 		summarizeBy: none
 		sourceColumn: team_abbr
 
@@ -11,7 +11,7 @@ table teams
 
 	column team_name
 		dataType: string
-		lineageTag: 37e3a2ee-8e12-4df6-bb0d-3579ab1de1e5
+		lineageTag: 7d0f06a1-91ec-4ba0-bb63-1e6eececf34a
 		summarizeBy: none
 		sourceColumn: team_name
 
@@ -19,7 +19,7 @@ table teams
 
 	column team_nick
 		dataType: string
-		lineageTag: db45cfdc-fc31-4d83-8003-9be710f09fb3
+		lineageTag: 27e9a6ca-bce1-4990-8b7a-1cd4eadf7515
 		summarizeBy: none
 		sourceColumn: team_nick
 
@@ -27,7 +27,7 @@ table teams
 
 	column team_conf
 		dataType: string
-		lineageTag: c4590de6-d641-4fb4-be9c-0c5a35497f1f
+		lineageTag: 4708cb80-7119-4faa-beac-f2347953ea0e
 		summarizeBy: none
 		sourceColumn: team_conf
 
@@ -35,7 +35,7 @@ table teams
 
 	column team_division
 		dataType: string
-		lineageTag: af23cacb-4be0-4b4c-9d47-cdb6a2ab010d
+		lineageTag: 54d9dcad-c546-4c67-979d-375cebb7656f
 		summarizeBy: none
 		sourceColumn: team_division
 
@@ -43,7 +43,7 @@ table teams
 
 	column team_color
 		dataType: string
-		lineageTag: 97f34d3e-adda-4631-9c45-b12e40582103
+		lineageTag: 5a916fa3-80ae-4cb6-bff0-604a6c8f415f
 		summarizeBy: none
 		sourceColumn: team_color
 
@@ -51,7 +51,7 @@ table teams
 
 	column team_color2
 		dataType: string
-		lineageTag: 85c08559-9b77-4d12-9e8b-d9c9070101bf
+		lineageTag: 6030c08a-85f4-4751-8f08-eebce3afef15
 		summarizeBy: none
 		sourceColumn: team_color2
 
@@ -59,7 +59,7 @@ table teams
 
 	column team_logo_espn
 		dataType: string
-		lineageTag: 99591900-fed9-4644-b2eb-9e23472fdcb2
+		lineageTag: c570c1c2-0145-4e96-b99b-e1e0d99c6085
 		summarizeBy: none
 		sourceColumn: team_logo_espn
 
@@ -76,4 +76,3 @@ table teams
 				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
-

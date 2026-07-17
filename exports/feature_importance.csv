@@ -1,11 +1,11 @@
-metric,importance
-off_epa_per_play,0.4276868807776926
-def_takeaways,0.12263423938254153
-turnover_margin,0.11688155076779795
-def_epa_per_play_allowed,0.08550719236033122
-off_success_rate,0.07635719776229286
-def_success_rate_allowed,0.07183982363388955
-def_third_down_pct_allowed,0.03854617939486528
-off_third_down_pct,0.030722193633214146
-off_turnovers,0.01779609979155865
-off_penalties,0.012028642495816233
+metric,importance,metric_label,metric_definition
+off_epa_per_play,0.4276868807776926,Offensive Efficiency (EPA/play),How many points each offensive play is worth on average. Positive = better than expected. The strongest predictor of wins.
+def_takeaways,0.12263423938254153,Turnovers Forced (Defense),Number of times the defense forced a turnover.
+turnover_margin,0.11688155076779795,Turnover Margin,Takeaways minus giveaways. Positive means the team gained the ball more than it lost it.
+def_epa_per_play_allowed,0.08550719236033122,Defensive Efficiency (EPA allowed/play),How many points the defense gives up per play on average. Lower (more negative) = a better defense.
+off_success_rate,0.07635719776229286,Offensive Success Rate,% of offensive plays that kept the team 'on schedule' toward a first down.
+def_success_rate_allowed,0.07183982363388955,Defensive Success Rate Allowed,% of opponent plays that stayed 'on schedule' against this defense.
+def_third_down_pct_allowed,0.03854617939486528,3rd Down % Allowed (Defense),% of opponent third-down attempts this defense allowed to be converted.
+off_third_down_pct,0.030722193633214146,3rd Down Conversion % (Offense),% of third-down attempts the offense successfully converted into a first down.
+off_turnovers,0.01779609979155865,Turnovers Given Away (Offense),Number of times the offense lost the ball via interception or fumble.
+off_penalties,0.012028642495816233,Penalties (Offense),Number of penalties committed while on offense.

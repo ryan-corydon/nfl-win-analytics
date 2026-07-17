@@ -1,33 +1,9 @@
 table team_season_summary
-	lineageTag: f3282b51-64d4-4fd8-87a7-f62d2beda043
-
-	measure 'Avg Win Pct' = AVERAGE(team_season_summary[win_pct])
-		formatString: 0.0%
-		lineageTag: a183b115-ff57-4add-9dd2-6aaccfd1617f
-
-	measure 'Avg Off EPA per Play' = AVERAGE(team_season_summary[off_epa_per_play])
-		formatString: 0.000
-		lineageTag: 74227f89-fc12-4894-9054-913dcf97c402
-
-	measure 'Avg Def EPA Allowed' = AVERAGE(team_season_summary[def_epa_per_play_allowed])
-		formatString: 0.000
-		lineageTag: 7c524064-b69a-49fa-9ecc-203b6153e993
-
-	measure 'Total Wins' = SUM(team_season_summary[wins])
-		formatString: 0
-		lineageTag: f5a07774-883e-4cef-8fee-943475f64929
-
-	measure 'Bears Win Pct' = CALCULATE([Avg Win Pct], team_season_summary[team] = "CHI")
-		formatString: 0.0%
-		lineageTag: a7683a11-5656-49b8-8fa5-f92ecc6fd070
-
-	measure 'League Avg Off EPA' = CALCULATE([Avg Off EPA per Play], ALL(team_season_summary[team]))
-		formatString: 0.000
-		lineageTag: 44f6baea-6266-40b4-a166-a5b61b5ad6e4
+	lineageTag: c733144c-80fc-4097-8123-fd83176c5e14
 
 	column team
 		dataType: string
-		lineageTag: 2860c168-e8c0-4f9f-8ade-973ce809f4ad
+		lineageTag: 674e7734-3cef-4500-b94f-5472f30a273b
 		summarizeBy: none
 		sourceColumn: team
 
@@ -36,7 +12,7 @@ table team_season_summary
 	column season
 		dataType: int64
 		formatString: 0
-		lineageTag: c734e7d4-9c1d-49b3-8cb1-518cf2b53c6a
+		lineageTag: 1ddba68e-f01e-499f-a9e2-a3c148560b96
 		summarizeBy: sum
 		sourceColumn: season
 
@@ -45,7 +21,7 @@ table team_season_summary
 	column games_played
 		dataType: int64
 		formatString: 0
-		lineageTag: a8f3361b-bcb7-47b1-837b-1f462d85b106
+		lineageTag: 0b1b30a3-b8b0-4bdf-b362-889f2d8c70b6
 		summarizeBy: sum
 		sourceColumn: games_played
 
@@ -54,7 +30,7 @@ table team_season_summary
 	column wins
 		dataType: int64
 		formatString: 0
-		lineageTag: a79223f4-5e42-4616-97df-c2737b8a53ed
+		lineageTag: 375181a0-9605-4290-81e6-269c5144f3f1
 		summarizeBy: sum
 		sourceColumn: wins
 
@@ -63,7 +39,7 @@ table team_season_summary
 	column losses
 		dataType: int64
 		formatString: 0
-		lineageTag: 1fb8d5bd-11ea-450e-8678-5bc7935738d1
+		lineageTag: 8bef91f4-288a-442d-8a74-9afe288a7aa0
 		summarizeBy: sum
 		sourceColumn: losses
 
@@ -71,7 +47,7 @@ table team_season_summary
 
 	column win_pct
 		dataType: double
-		lineageTag: 46b8f9a2-191c-4fcc-b803-8971a0577b9b
+		lineageTag: 9ab1bad4-b64d-4718-a8ba-4dab6fee77dc
 		summarizeBy: sum
 		sourceColumn: win_pct
 
@@ -79,7 +55,7 @@ table team_season_summary
 
 	column points_per_game
 		dataType: double
-		lineageTag: d12d0df2-244a-4a08-aaef-c84a6ddc8cc0
+		lineageTag: cbc931e5-f987-4d7f-b2aa-722dae625ce0
 		summarizeBy: sum
 		sourceColumn: points_per_game
 
@@ -87,7 +63,7 @@ table team_season_summary
 
 	column points_allowed_per_game
 		dataType: double
-		lineageTag: 6a0b539b-6d75-4737-9142-5a4d791fc418
+		lineageTag: 311ffa9a-cf40-4b78-8b72-d5b491fb3c36
 		summarizeBy: sum
 		sourceColumn: points_allowed_per_game
 
@@ -95,7 +71,7 @@ table team_season_summary
 
 	column point_differential
 		dataType: double
-		lineageTag: 254c7820-5f47-45d1-9ca7-f9b436a4d151
+		lineageTag: 95e005b3-11aa-4778-ae99-1e1e47787c00
 		summarizeBy: sum
 		sourceColumn: point_differential
 
@@ -103,7 +79,7 @@ table team_season_summary
 
 	column off_epa_per_play
 		dataType: double
-		lineageTag: 43b7fb71-1eb4-42b3-a470-1d41ebc28dd4
+		lineageTag: 94e15fbb-e1e6-4844-96c3-101c2d9ef892
 		summarizeBy: sum
 		sourceColumn: off_epa_per_play
 
@@ -111,7 +87,7 @@ table team_season_summary
 
 	column off_success_rate
 		dataType: double
-		lineageTag: fc49b082-034a-493d-a31f-a18fda2be0ba
+		lineageTag: 4cd2e68c-57c0-4c29-902b-966fc12d1d65
 		summarizeBy: sum
 		sourceColumn: off_success_rate
 
@@ -119,7 +95,7 @@ table team_season_summary
 
 	column off_third_down_pct
 		dataType: double
-		lineageTag: 7abf2c16-ff2d-41d9-aa1e-15b8d8332594
+		lineageTag: 6044e617-7070-4e35-a460-bd33c1fca700
 		summarizeBy: sum
 		sourceColumn: off_third_down_pct
 
@@ -127,7 +103,7 @@ table team_season_summary
 
 	column off_turnovers
 		dataType: double
-		lineageTag: 0e667357-6afe-48f7-a5aa-821c8f89e89f
+		lineageTag: 1bb2427b-91ee-4562-b80a-39dd46d85792
 		summarizeBy: sum
 		sourceColumn: off_turnovers
 
@@ -135,7 +111,7 @@ table team_season_summary
 
 	column off_penalties
 		dataType: double
-		lineageTag: da04bc3e-2b98-476d-b0ab-dad1c5e6aafb
+		lineageTag: 691b738d-65eb-4310-a192-7db5fc70737b
 		summarizeBy: sum
 		sourceColumn: off_penalties
 
@@ -143,7 +119,7 @@ table team_season_summary
 
 	column def_epa_per_play_allowed
 		dataType: double
-		lineageTag: 5c183ee5-433b-4d00-b37e-5ccf82e608c4
+		lineageTag: e94221e2-7f83-4f79-9652-f70f47c4ea74
 		summarizeBy: sum
 		sourceColumn: def_epa_per_play_allowed
 
@@ -151,7 +127,7 @@ table team_season_summary
 
 	column def_success_rate_allowed
 		dataType: double
-		lineageTag: a9676128-6e57-4aca-a77a-f255c4cfd446
+		lineageTag: 2fb7ea1e-0a9a-4c67-9f59-d33cdd4d2084
 		summarizeBy: sum
 		sourceColumn: def_success_rate_allowed
 
@@ -159,7 +135,7 @@ table team_season_summary
 
 	column def_third_down_pct_allowed
 		dataType: double
-		lineageTag: 6efdb0fe-e316-42f7-8080-ee2b237e83fc
+		lineageTag: 3032060b-bdf7-451f-9d2a-220659c97376
 		summarizeBy: sum
 		sourceColumn: def_third_down_pct_allowed
 
@@ -167,7 +143,7 @@ table team_season_summary
 
 	column def_takeaways
 		dataType: double
-		lineageTag: 6808bc31-ee68-4328-8a5e-81edbe64324f
+		lineageTag: f734a9db-95a0-4e23-adea-c7b670a9d329
 		summarizeBy: sum
 		sourceColumn: def_takeaways
 
@@ -175,11 +151,35 @@ table team_season_summary
 
 	column turnover_margin
 		dataType: double
-		lineageTag: 9110ca77-a76a-4f09-9215-9392bb8d3feb
+		lineageTag: e5a1712e-be28-4b56-b420-70a97417270f
 		summarizeBy: sum
 		sourceColumn: turnover_margin
 
 		annotation SummarizationSetBy = Automatic
+
+	measure 'Avg Win Pct' = AVERAGE(team_season_summary[win_pct])
+		formatString: 0.0%
+		lineageTag: d1bec0bd-bac2-47a0-a2e8-5402912939f0
+
+	measure 'Avg Off EPA per Play' = AVERAGE(team_season_summary[off_epa_per_play])
+		formatString: 0.000
+		lineageTag: bcf87ffc-c88b-4ed9-a5ec-c524afa53a0d
+
+	measure 'Avg Def EPA Allowed' = AVERAGE(team_season_summary[def_epa_per_play_allowed])
+		formatString: 0.000
+		lineageTag: dbbea7ce-4d1f-42e4-8c05-98770e6e041c
+
+	measure 'Total Wins' = SUM(team_season_summary[wins])
+		formatString: 0
+		lineageTag: 52003d27-3d68-4e93-a264-a53ee1034324
+
+	measure 'Bears Win Pct' = CALCULATE([Avg Win Pct], team_season_summary[team] = "CHI")
+		formatString: 0.0%
+		lineageTag: bbef3cb3-672d-4f5e-89f2-ad8401e3097c
+
+	measure 'League Avg Off EPA' = CALCULATE([Avg Off EPA per Play], ALL(team_season_summary[team]))
+		formatString: 0.000
+		lineageTag: 8abe8858-378f-4d7b-b55e-a918c9e46a56
 
 	partition team_season_summary = m
 		mode: import
@@ -192,4 +192,3 @@ table team_season_summary
 				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
-

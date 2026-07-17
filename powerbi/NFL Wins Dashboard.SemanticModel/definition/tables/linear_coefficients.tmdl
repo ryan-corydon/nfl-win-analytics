@@ -1,9 +1,9 @@
 table linear_coefficients
-	lineageTag: e8476348-eec1-4737-b690-8b983481cda6
+	lineageTag: 306e2f61-e54e-450f-84a0-9442b6f55b85
 
 	column metric
 		dataType: string
-		lineageTag: 118c4d09-6ec0-4693-9e2f-27ca6ae53878
+		lineageTag: 5544dd1c-7693-4b84-8f41-4947e0e6ad94
 		summarizeBy: none
 		sourceColumn: metric
 
@@ -11,7 +11,7 @@ table linear_coefficients
 
 	column standardized_coefficient
 		dataType: double
-		lineageTag: 09b0e7ba-950f-4e06-b897-d5e64b90dba7
+		lineageTag: 75d3d1b9-14c9-4c3d-a682-56b88d4246e7
 		summarizeBy: sum
 		sourceColumn: standardized_coefficient
 
@@ -28,4 +28,3 @@ table linear_coefficients
 				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
-

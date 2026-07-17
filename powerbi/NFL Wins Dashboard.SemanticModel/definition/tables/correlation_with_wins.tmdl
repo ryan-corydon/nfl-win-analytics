@@ -1,9 +1,9 @@
 table correlation_with_wins
-	lineageTag: 94d5e2ba-65fa-444e-bd04-92a94584b1ed
+	lineageTag: fca462e0-d576-47a9-a935-438291df5eb0
 
 	column metric
 		dataType: string
-		lineageTag: 938b3b39-df49-4e3f-951b-e5eecef44377
+		lineageTag: 09169dd6-a952-48dd-bda3-0b06c17b10f1
 		summarizeBy: none
 		sourceColumn: metric
 
@@ -11,7 +11,7 @@ table correlation_with_wins
 
 	column correlation_with_win_pct
 		dataType: double
-		lineageTag: 937c5279-d3a3-4dd1-94c2-b90bc87ee07e
+		lineageTag: 4baaab8b-ffa2-47e7-ac50-a3c550e42cdf
 		summarizeBy: sum
 		sourceColumn: correlation_with_win_pct
 
@@ -28,4 +28,3 @@ table correlation_with_wins
 				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
-

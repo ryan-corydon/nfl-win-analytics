@@ -43,7 +43,37 @@ print(f"\n=== Random Forest ===\nHeld-out R^2: {r2:.3f}")
 
 importance = pd.Series(rf.feature_importances_, index=FEATURES).sort_values(ascending=False)
 print(importance.to_string())
-importance.rename("importance").rename_axis("metric").to_csv("../exports/feature_importance.csv")
+
+# Plain-English labels/definitions so the chart is readable without any
+# football or stats background.
+METRIC_LABELS = {
+    "off_epa_per_play": "Offensive Efficiency (EPA/play)",
+    "def_epa_per_play_allowed": "Defensive Efficiency (EPA allowed/play)",
+    "off_success_rate": "Offensive Success Rate",
+    "def_success_rate_allowed": "Defensive Success Rate Allowed",
+    "off_third_down_pct": "3rd Down Conversion % (Offense)",
+    "def_third_down_pct_allowed": "3rd Down % Allowed (Defense)",
+    "off_turnovers": "Turnovers Given Away (Offense)",
+    "def_takeaways": "Turnovers Forced (Defense)",
+    "off_penalties": "Penalties (Offense)",
+    "turnover_margin": "Turnover Margin",
+}
+METRIC_DEFINITIONS = {
+    "off_epa_per_play": "How many points each offensive play is worth on average. Positive = better than expected. The strongest predictor of wins.",
+    "def_epa_per_play_allowed": "How many points the defense gives up per play on average. Lower (more negative) = a better defense.",
+    "off_success_rate": "% of offensive plays that kept the team 'on schedule' toward a first down.",
+    "def_success_rate_allowed": "% of opponent plays that stayed 'on schedule' against this defense.",
+    "off_third_down_pct": "% of third-down attempts the offense successfully converted into a first down.",
+    "def_third_down_pct_allowed": "% of opponent third-down attempts this defense allowed to be converted.",
+    "off_turnovers": "Number of times the offense lost the ball via interception or fumble.",
+    "def_takeaways": "Number of times the defense forced a turnover.",
+    "off_penalties": "Number of penalties committed while on offense.",
+    "turnover_margin": "Takeaways minus giveaways. Positive means the team gained the ball more than it lost it.",
+}
+importance_df = importance.rename("importance").rename_axis("metric").reset_index()
+importance_df["metric_label"] = importance_df["metric"].map(METRIC_LABELS)
+importance_df["metric_definition"] = importance_df["metric"].map(METRIC_DEFINITIONS)
+importance_df.to_csv("../exports/feature_importance.csv", index=False)
 
 # --- Standardized linear regression for interpretable direction/magnitude ---
 scaler = StandardScaler()
