@@ -1,0 +1,54 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "37dc8a2c-3a45-4c33-8e3c-9aed07ed6e66",
+  "position": {
+    "x": 940,
+    "y": 270,
+    "width": 300,
+    "height": 150,
+    "z": 1004,
+    "tabOrder": 1004
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "team_season_summary"
+                    }
+                  },
+                  "Property": "Avg Win Pct"
+                }
+              },
+              "queryRef": "team_season_summary.Avg Win Pct",
+              "nativeQueryRef": "League Avg Win Pct",
+              "displayName": "League Avg Win Pct"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {},
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'League Average (for comparison)'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
