@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "team_season_summary.Avg Win Pct",
-              "nativeQueryRef": "Avg Win Pct"
+              "nativeQueryRef": "Avg Win %",
+              "displayName": "Avg Win %"
             }
           ]
         }

@@ -4,9 +4,9 @@
   "position": {
     "x": 940,
     "y": 270,
-    "width": 300,
-    "height": 150,
     "z": 1004,
+    "height": 150,
+    "width": 300,
     "tabOrder": 1004
   },
   "visual": {
@@ -34,7 +34,6 @@
         }
       }
     },
-    "objects": {},
     "visualContainerObjects": {
       "title": [
         {

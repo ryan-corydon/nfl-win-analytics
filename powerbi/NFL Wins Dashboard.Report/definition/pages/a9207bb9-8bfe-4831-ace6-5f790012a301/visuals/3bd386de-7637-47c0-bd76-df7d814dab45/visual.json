@@ -4,9 +4,9 @@
   "position": {
     "x": 970,
     "y": 100,
-    "width": 290,
-    "height": 90,
     "z": 1004,
+    "height": 90,
+    "width": 290,
     "tabOrder": 1004
   },
   "visual": {
@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "teams.team_division",
-              "nativeQueryRef": "Division"
+              "nativeQueryRef": "Division",
+              "active": true
             }
           ]
         }

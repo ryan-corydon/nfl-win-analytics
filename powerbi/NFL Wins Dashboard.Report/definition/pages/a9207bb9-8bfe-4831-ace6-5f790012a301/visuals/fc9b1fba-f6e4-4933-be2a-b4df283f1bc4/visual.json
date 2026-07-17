@@ -4,9 +4,9 @@
   "position": {
     "x": 660,
     "y": 100,
-    "width": 290,
-    "height": 90,
     "z": 1003,
+    "height": 90,
+    "width": 290,
     "tabOrder": 1003
   },
   "visual": {
@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "teams.team_conf",
-              "nativeQueryRef": "Conference"
+              "nativeQueryRef": "Conference",
+              "active": true
             }
           ]
         }

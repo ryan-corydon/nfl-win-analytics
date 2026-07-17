@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "team_season_summary.Avg Off EPA per Play",
-              "nativeQueryRef": "Avg Off EPA per Play"
+              "nativeQueryRef": "Avg Off EPA Per Play",
+              "displayName": "Avg Off EPA Per Play"
             }
           ]
         }
