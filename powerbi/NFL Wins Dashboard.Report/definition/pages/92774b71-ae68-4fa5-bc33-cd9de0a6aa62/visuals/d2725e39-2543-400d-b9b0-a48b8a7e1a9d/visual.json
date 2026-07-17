@@ -76,30 +76,6 @@
               "displayName": "League Avg Off EPA/Play"
             }
           ]
-        },
-        "Y2": {
-          "projections": [
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "bears_vs_league"
-                        }
-                      },
-                      "Property": "win_pct"
-                    }
-                  },
-                  "Function": 0
-                }
-              },
-              "queryRef": "Sum(bears_vs_league.win_pct)",
-              "nativeQueryRef": "Bears Win %",
-              "displayName": "Bears Win %"
-            }
-          ]
         }
       },
       "sortDefinition": {
@@ -133,7 +109,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Bears Efficiency (left axis) vs Win % (right axis)'"
+                  "Value": "'Bears Offensive Efficiency vs League Average'"
                 }
               }
             }
