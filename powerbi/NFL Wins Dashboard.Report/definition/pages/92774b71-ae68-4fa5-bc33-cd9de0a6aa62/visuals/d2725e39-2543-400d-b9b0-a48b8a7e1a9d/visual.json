@@ -10,7 +10,7 @@
     "tabOrder": 1000
   },
   "visual": {
-    "visualType": "lineChart",
+    "visualType": "areaChart",
     "query": {
       "queryState": {
         "Category": {
@@ -52,8 +52,52 @@
                 }
               },
               "queryRef": "Sum(bears_vs_league.off_epa_per_play)",
-              "nativeQueryRef": "Off EPA Per Play",
-              "displayName": "Off EPA Per Play"
+              "nativeQueryRef": "Bears Off EPA/Play",
+              "displayName": "Bears Off EPA/Play"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "bears_vs_league"
+                        }
+                      },
+                      "Property": "off_epa_per_play_league_avg"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(bears_vs_league.off_epa_per_play_league_avg)",
+              "nativeQueryRef": "League Avg Off EPA/Play",
+              "displayName": "League Avg Off EPA/Play"
+            }
+          ]
+        },
+        "Y2": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "bears_vs_league"
+                        }
+                      },
+                      "Property": "win_pct"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(bears_vs_league.win_pct)",
+              "nativeQueryRef": "Bears Win %",
+              "displayName": "Bears Win %"
             }
           ]
         }
@@ -89,7 +133,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Bears Offensive Efficiency vs League Average'"
+                  "Value": "'Bears Efficiency (left axis) vs Win % (right axis)'"
                 }
               }
             }
