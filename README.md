@@ -8,6 +8,14 @@ Points and record are the *outcome*. This project looks upstream at the *process
 
 As a case study, the analysis also breaks out the **Chicago Bears** specifically across the sample period.
 
+## Dashboard
+
+| League Overview | Bears Deep Dive | Team Explorer |
+|---|---|---|
+| ![League Overview](exports/screenshots/league-overview.png) | ![Bears Deep Dive](exports/screenshots/bears-deep-dive.png) | ![Team Explorer](exports/screenshots/team-explorer.png) |
+
+The dashboard also includes a plain-English **Glossary** page explaining EPA, success rate, and other stats for viewers without a football background.
+
 ## Data
 
 Play-by-play and schedule data for the 2019-2023 NFL regular seasons, pulled via [`nfl_data_py`](https://github.com/nflverse/nfl_data_py) (public, from the nflverse project). ~244,000 plays across 159 team-seasons.
