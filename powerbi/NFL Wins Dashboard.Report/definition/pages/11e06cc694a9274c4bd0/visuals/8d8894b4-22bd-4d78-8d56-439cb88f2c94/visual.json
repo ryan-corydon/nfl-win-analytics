@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
   "name": "8d8894b4-22bd-4d78-8d56-439cb88f2c94",
   "position": {
-    "x": 20,
-    "y": 150,
+    "x": 660.19334208240139,
+    "y": 169.59095025969944,
     "z": 1003,
-    "height": 550,
-    "width": 600,
+    "height": 536.02853921369285,
+    "width": 599.62514556108022,
     "tabOrder": 1003
   },
   "visual": {
@@ -122,6 +122,23 @@
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "team_season_summary"
+                  }
+                },
+                "Property": "off_epa_per_play"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
       }
     },
     "visualContainerObjects": {

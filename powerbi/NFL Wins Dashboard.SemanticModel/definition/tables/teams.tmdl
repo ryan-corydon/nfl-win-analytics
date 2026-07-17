@@ -76,3 +76,4 @@ table teams
 				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
+

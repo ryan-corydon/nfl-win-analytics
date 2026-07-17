@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "team_season_summary.Bears Win Pct",
-              "nativeQueryRef": "Bears Win Pct"
+              "nativeQueryRef": "Bears Win %",
+              "displayName": "Bears Win %"
             }
           ]
         }

@@ -28,3 +28,4 @@ table correlation_with_wins
 				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
+

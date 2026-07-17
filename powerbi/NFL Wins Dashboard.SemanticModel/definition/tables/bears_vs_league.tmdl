@@ -256,3 +256,4 @@ table bears_vs_league
 				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
+
